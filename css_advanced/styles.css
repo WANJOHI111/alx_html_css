@@ -244,3 +244,37 @@ section.banner {
   background-color: #e14c50;
 }
 
+/* ---------- FAQ Section ---------- */
+.faq {
+  background-color: #ffffff; /* Replace with Figma value */
+  padding: 100px 40px;
+  font-family: 'YourFont', sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.faq h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.faq-item {
+  margin-bottom: 40px;
+}
+
+.faq-item h3 {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+}
+
