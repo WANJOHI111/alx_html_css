@@ -70,4 +70,47 @@ section.banner {
   background-color: #e14c50; /* Slightly darker for hover */
 }
 
+/* ---------- Quote Section ---------- */
+.quote {
+  background-color: #f5f5f5; /* Replace with Figma value */
+  padding: 100px 20px;
+  text-align: center;
+  font-family: 'YourFont', sans-serif;
+  color: #333333;
+}
+
+.quote blockquote {
+  font-size: 24px; /* Match Figma */
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.quote .author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.quote .author img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.author-info h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.author-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #777777;
+}
+
 
