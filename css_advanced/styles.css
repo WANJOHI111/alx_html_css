@@ -82,3 +82,11 @@ header nav a {
   font-weight: bold;
   color: #555;
 }
+.text-center {
+  text-align: center;
+}
+
+.max-width-lg {
+  max-width: 800px;
+  margin: 0 auto;
+}
