@@ -62,3 +62,23 @@ header nav a {
   font-weight: bold;
 }
 
+.quote {
+  background-color: #f5f5f5; /* or use the actual color from Figma */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.quote blockquote {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+.quote .author {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+}
