@@ -278,3 +278,57 @@ section.banner {
   line-height: 1.6;
 }
 
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #0a0a0a; /* Replace with actual Figma color */
+  color: #ffffff;
+  padding: 60px 40px;
+  font-family: 'YourFont', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.footer .logo {
+  height: 40px; /* Match Figma */
+}
+
+.footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer .social a img {
+  height: 24px;
+  margin: 0 8px;
+}
+
+.footer .social {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin-top: 40px;
+}
+
