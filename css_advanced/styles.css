@@ -113,4 +113,58 @@ section.banner {
   color: #777777;
 }
 
+/* ---------- Videos List Section ---------- */
+.videos {
+  padding: 80px 40px;
+  background-color: #ffffff; /* Replace with Figma color if different */
+  text-align: center;
+}
+
+.videos h2 {
+  font-size: 32px; /* Match Figma */
+  margin-bottom: 60px;
+  color: #333;
+  font-weight: 700;
+}
+
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-card {
+  background-color: #f9f9f9; /* or white, based on Figma */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-card h3 {
+  font-size: 18px;
+  margin: 16px;
+  color: #222;
+  font-weight: 600;
+}
+
+.video-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 16px 20px;
+  line-height: 1.5;
+}
+
 
