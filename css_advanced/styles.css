@@ -167,4 +167,80 @@ section.banner {
   line-height: 1.5;
 }
 
+/* ---------- Membership Section ---------- */
+.membership {
+  background-color: #f0f4f8; /* Replace with actual Figma color */
+  padding: 100px 40px;
+  text-align: center;
+  font-family: 'YourFont', sans-serif;
+}
+
+.membership h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.membership p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.membership-plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.plan-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.plan-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.plan-card .price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff5a5f; /* Match Figma price color */
+  margin-bottom: 20px;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.plan-card ul li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.plan-card .button {
+  display: inline-block;
+  background-color: #ff5a5f;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.plan-card .button:hover {
+  background-color: #e14c50;
+}
 
