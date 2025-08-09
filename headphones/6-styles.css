@@ -1,0 +1,140 @@
+/* ===== RESET ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ===== VARIABLES ===== */
+:root{
+  --primary-color: #FF6565;
+  --text-color: #fff;
+  --muted: #dcdcdc;
+  --max-width: 1000px;
+  --font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* ===== BASE ===== */
+body{
+  font-family: var(--font-family);
+  background: #000;
+  color: var(--text-color);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* simple container centering helper */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+
+/* ===== NAV / HERO (kept simple) ===== */
+.header {
+  background: url('images/hero-background.jpg') center/cover no-repeat;
+  padding: 20px 0 80px;
+}
+.navbar { display:flex; justify-content:space-between; align-items:center; max-width:var(--max-width); margin:0 auto; padding:0 20px; }
+.logo img { height:40px; }
+.nav-links { display:flex; gap:30px; list-style:none; }
+.nav-links a { color:var(--text-color); text-decoration:none; transition: color .2s; }
+.nav-links a:hover, .nav-links a:active { color:var(--primary-color); }
+.hero { max-width:var(--max-width); margin:60px auto 0; padding:0 20px; text-align:center; }
+.hero h1 { font-size:2.5rem; margin-bottom:20px; }
+.hero p { font-size:1rem; margin-bottom:30px; line-height:1.5; }
+.btn { display:inline-block; padding:15px 30px; background:var(--primary-color); color:var(--text-color); text-decoration:none; font-weight:700; border-radius:4px; transition:opacity .2s; cursor:pointer; }
+.btn:hover, .btn:active { opacity:.9; }
+
+/* ===== WHAT WE DO ===== */
+.what-we-do { background:#fff; color:#000; padding:60px 20px; }
+.section-header { max-width:var(--max-width); margin:0 auto 50px; text-align:center; }
+.section-header h2 { font-size:2rem; margin-bottom:12px; }
+.section-header p { font-size:1rem; color: #444; line-height:1.5; }
+.features { display:flex; flex-wrap:wrap; justify-content:center; gap:40px; max-width:var(--max-width); margin:0 auto; }
+
+/* generic feature card */
+.feature { flex: 1 1 calc(25% - 40px); min-width:200px; text-align:center; padding:10px; }
+
+/* icon style reused */
+.icon { font-size:4rem; color:var(--primary-color); display:block; margin-bottom:20px; }
+.feature h3 { font-size:1.2rem; margin-top:10px; }
+.feature p { font-size:0.9rem; color:#333; line-height:1.4; }
+
+/* ===== OUR RESULTS (NO IMAGE — CSS PENTAGONS) ===== */
+.our-results { padding: 60px 20px; background: linear-gradient(180deg,#0b0b0b 0%, #0d0d0d 100%); color:var(--text-color); }
+.our-results .overlay { max-width:var(--max-width); margin:0 auto; padding:40px 20px; text-align:center; }
+
+/* results grid uses same .features layout but with custom classes */
+.results-grid { gap:40px; }
+
+/* feature in results needs relative positioning for pentagon placement */
+.results-grid .feature {
+  position: relative;
+  flex: 1 1 calc(25% - 40px);
+  min-width:200px;
+  padding-top: 70px; /* give room for pentagon & circle */
+  text-align:center;
+}
+
+/* the pentagon shape (no image) */
+.pentagon{
+  --size: 180px;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(-10%) rotate(0deg);
+  /* pentagon polygon points (regular-ish pentagon) */
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  background: rgba(255,101,101,0.12); /* subtle fill */
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.6));
+  transition: transform .35s ease, opacity .25s;
+  z-index: 0;
+}
+
+/* small transform differences per pentagon to create variety */
+.pent-1 { background: linear-gradient(135deg, rgba(255,101,101,0.13), rgba(255,101,101,0.06)); transform: translateX(-50%) translateY(-8%) rotate(-6deg) scale(1); }
+.pent-2 { background: linear-gradient(135deg, rgba(101,255,199,0.10), rgba(101,255,199,0.03)); transform: translateX(-50%) translateY(-4%) rotate(8deg) scale(.95); }
+.pent-3 { background: linear-gradient(135deg, rgba(101,149,255,0.10), rgba(101,149,255,0.03)); transform: translateX(-50%) translateY(-12%) rotate(-3deg) scale(1.05); }
+.pent-4 { background: linear-gradient(135deg, rgba(255,201,101,0.10), rgba(255,201,101,0.03)); transform: translateX(-50%) translateY(-6%) rotate(4deg) scale(.98); }
+
+/* stat circle sits above the pentagon */
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(255,255,255,0.02));
+  position: relative;
+  z-index: 2; /* above pentagon */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.6);
+}
+
+/* result title sits below */
+.results-grid .feature h3 { color: var(--text-color); font-size:1.1rem; margin-top:10px; z-index:3; position:relative; }
+
+/* small hover lift */
+.results-grid .feature:hover .pentagon { transform: translateX(-50%) translateY(-12%) scale(1.04) rotate(-2deg); opacity: .98; }
+.results-grid .feature:hover .circle { transform: translateY(-6px); transition: transform .25s ease; }
+
+/* ===== CONTACT + FOOTER (simplified) ===== */
+.contact-us { background:#fff; color:#000; padding:60px 20px; }
+.contact-form { max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:20px; }
+.contact-form input, .contact-form textarea { padding:15px; border:2px solid #ccc; border-radius:4px; font-size:1rem; transition: border-color .2s, box-shadow .2s; }
+.contact-form input:focus, .contact-form textarea:focus { border-color:var(--primary-color); box-shadow:0 0 8px rgba(255,101,101,0.15); outline:none; }
+.site-footer { background:#000; color:#fff; padding:20px 0; text-align:center; }
+.footer-container { max-width:var(--max-width); margin:0 auto; padding:0 20px; }
+.footer-logo { width:150px; margin:0 auto 8px; display:block; }
+.social-icons a { color:#fff; margin:0 8px; font-size:20px; text-decoration:none; transition: color .2s; }
+.social-icons a:hover { color:var(--primary-color); }
+
+/* ===== RESPONSIVE (≤480px) ===== */
+@media (max-width:480px){
+  .nav-links { display:none; }
+  .hero h1 { font-size:1.8rem; }
+  .features, .results-grid { flex-direction: column; align-items: center; }
+  .results-grid .feature { padding-top: 40px; max-width:320px; }
+  .pentagon { --size: 130px; transform: translateX(-50%) translateY(-6%) scale(.9) rotate(0deg); }
+  .circle { width: 120px; height: 120px; font-size:1.25rem; }
+}
