@@ -1,0 +1,115 @@
+/* ===== CSS RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+    --primary-color: #FF6565;
+    --text-color: #fff;
+    --max-width: 1000px;
+    --font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: #000;
+}
+
+/* Center container with max-width */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER / HERO ===== */
+.header {
+    background: url('images/hero-background.jpg') center/cover no-repeat;
+    padding: 20px 0 80px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+    color: var(--primary-color);
+}
+
+/* Hero Content */
+.hero {
+    max-width: var(--max-width);
+    margin: 60px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+    opacity: 0.9;
+}
+
+/* ===== MOBILE (≤480px) ===== */
+@media (max-width: 480px) {
+    .nav-links {
+        display: none; /* We'll add a mobile menu later */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+}
